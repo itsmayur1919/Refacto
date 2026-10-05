@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden;
+}
+
+/* Background Grid & Radial Glow Utilities */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(241, 243, 245, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(241, 243, 245, 0.05) 1px, transparent 1px);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15) 0%, rgba(15, 118, 110, 0.05) 35%, transparent 70%);
+}
+
+.dark .bg-radial-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.2) 0%, rgba(15, 118, 110, 0.1) 40%, transparent 75%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-card {
+  background: rgba(23, 26, 31, 0.85);
+  border: 1px solid rgba(46, 51, 61, 0.8);
+}
+
+/* Dark mode styling overrides for application */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #0F1216;
+  color: #F1F3F5;
+}
+
+.dark .bg-paper {
+  background-color: #0F1216 !important;
+}
+
+.dark .bg-white {
+  background-color: #171A1F !important;
+}
+
+.dark .bg-\[\#FCFDF9\],
+.dark .bg-\[\#FCFDF9\]\/50 {
+  background-color: #1F232B !important;
+}
+
+.dark .bg-\[\#F6F6F3\] {
+  background-color: #21252D !important;
+}
+
+.dark .text-ink {
+  color: #F1F3F5 !important;
+}
+
+.dark .text-muted {
+  color: #9EA3AC !important;
+}
+
+.dark .border-hairline,
+.dark .border-\[\#E4E3DD\],
+.dark .border-\[\#EDECE6\] {
+  border-color: #2E333D !important;
+}
+
+.dark .divide-hairline > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2E333D !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #171A1F;
+  color: #F1F3F5;
+  border-color: #2E333D;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #6C727F;
+}
+
+.dark table thead {
+  background-color: #21252D !important;
+}
+
+.dark tr:hover {
+  background-color: #1F232B !important;
+}
+
+/* Hardware accelerated smooth scrollbar for sidebar and containers */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(51, 65, 85, 0.4) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.4);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+
+
