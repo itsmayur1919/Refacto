@@ -342,7 +342,11 @@ export const api = {
 export async function exportProjectXlsx(projectId: number, projectName: string): Promise<void> {
   const token = typeof window !== "undefined" ? sessionStorage.getItem("access_token") : null;
   const res = await fetch(`${API_BASE}/projects/${projectId}/export`, {
-    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    // headers: token ? { Authorization: `Bearer ${token}` } : {},
+       headers: {
+      "ngrok-skip-browser-warning": "true",
+      ...(token ? { Authorization: `Bearer ${token}` } : {})
+    },
   });
   if (!res.ok) {
     const text = await res.text().catch(() => "");
