@@ -80,12 +80,12 @@ export function Sidebar() {
     <aside className="relative flex h-full max-h-screen w-72 shrink-0 flex-col border-r border-slate-800/80 bg-slate-950 px-4 py-5 text-slate-200 select-none z-30">
       {/* Sidebar Header & Brand */}
       <div className="mb-5 flex flex-col gap-3.5 shrink-0">
-        <div className="flex items-center justify-between px-3 py-2 rounded-2xl bg-white shadow-md border border-slate-200/90">
+        <div className="flex items-center justify-between px-2 py-2.5 rounded-2xl bg-slate-900/60 border border-slate-800/80 shadow-sm">
           <Link href="/projects" className="flex items-center w-full justify-center">
             <img
-              src="/refacto-logo.png"
+              src="/refacto-logo-white.png"
               alt="RefactoFlow Logo"
-              className="h-8.5 w-auto max-w-[200px] object-contain py-0.5 transition-transform hover:scale-105 duration-200"
+              className="h-11 w-auto max-w-[230px] object-contain py-0.5 transition-transform hover:scale-105 duration-200"
             />
           </Link>
         </div>
